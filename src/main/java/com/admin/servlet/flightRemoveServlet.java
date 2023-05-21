@@ -1,0 +1,27 @@
+package com.admin.servlet;
+
+import com.admin.bean.Flight;
+import com.admin.dao.flightDao;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.IOException;
+import java.util.List;
+
+public class flightRemoveServlet extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doPost(request,response);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
+        response.setContentType("text/html;charset=utf-8");
+        String flightId=request.getParameter("flightId");
+        System.out.println(flightId);
+        boolean flights= new flightDao().deleteFilght(flightId);
+        response.sendRedirect(request.getContextPath()+"/admin/flightSearchServlet");
+
+    }
+}

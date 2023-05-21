@@ -1,0 +1,148 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  height: 490px;
+
+  position: absolute;
+  top: 130px;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+.content > .flight-slider.flight-banner {
+  height: 490px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  display: block;
+  /* border: 1px red solid; */
+}
+.content > .flight-slider.flight-banner ul {
+  margin-bottom: 0px;
+}
+.content > .flight-slider.flight-banner ul li {
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  filter: alpha(opacity=0);
+}
+
+.content > .flight-slider.flight-banner ul li a {
+  height: 490px;
+  background-position: top center;
+  background-color: #166a8f;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+}
+.content > .flight-quick-search {
+  width: 1200px;
+  position: absolute;
+  top: -33px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 10;
+}
+
+.content .rows .flight-form .flight-index-search {
+  position: relative;
+  width: 400px;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 9;
+  margin-top: 40px;
+  border-radius: 12px;
+}
+
+.content .rows .flight-form .flight-index-search > div {
+  padding: 15px 10px;
+  border-bottom: 8px solid rgb(22 106 143);
+  border-radius: 12px;
+  font-size: 16px;
+  display: block;
+  text-align: center;
+  cursor: pointer;
+}
+#searchFlightBox {
+  padding: 15px 30px;
+  height: 400px;
+}
+.flight-form-item {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  clear: none;
+  height: 45px;
+}
+.flight-form-item .flight-input-inline {
+  margin-right: 10px;
+  float: left;
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.flight-form-item .flight-form-label {
+  position: absolute;
+  left: 10px;
+  z-index: 9;
+  text-align: left;
+  float: left;
+  display: block;
+  padding: 10px;
+  height: 38px;
+  line-height: 18px;
+  width: 80px;
+  font-weight: normal;
+  font-size: 12px;
+}
+.flight-form-item .flight-input {
+  width: 92%;
+  border: 1px solid #ececec;
+  background: #fff;
+  padding-left: 77px;
+  font-family: inherit;
+  font-size: 13px;
+  font-style: inherit;
+  font-weight: inherit;
+  height: 38px;
+  /* padding: 10px; */
+  display: block;
+}
+.flight-form-item .flight-input:focus {
+  border-color: rgb(22 106 143);
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+    0 0 8px rgb(22 106 143);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgb(22 106 143);
+}
+.flight-form-item .flight-search-submit {
+  text-align: center;
+}
+.flight-form-item .flight-search-submit .flight-btn {
+  height: 44px;
+  line-height: 44px;
+  padding: 0 25px;
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #166a8f;
+  border-radius: 2px;
+  color: #fff;
+}

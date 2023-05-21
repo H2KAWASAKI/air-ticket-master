@@ -1,0 +1,221 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+
+  <display-name>Archetype Created Web Application</display-name>
+
+    <filter>
+        <filter-name>webFilter</filter-name>
+        <filter-class>com.admin.filter.webFilter</filter-class>
+    </filter>
+    <filter>
+        <filter-name>indexFilter</filter-name>
+        <filter-class>com.user.filter.indexFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>webFilter</filter-name>
+        <url-pattern>/admin/*</url-pattern>
+    </filter-mapping>
+
+    <filter-mapping>
+        <filter-name>indexFilter</filter-name>
+        <url-pattern>/default/*</url-pattern>
+    </filter-mapping>
+
+
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>com.admin.servlet.loginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>logoutServlet</servlet-name>
+        <servlet-class>com.admin.servlet.logoutServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>flightSearchServlet</servlet-name>
+        <servlet-class>com.admin.servlet.flightSearchServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>flightRemoveServlet</servlet-name>
+        <servlet-class>com.admin.servlet.flightRemoveServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>addFlightServlet</servlet-name>
+        <servlet-class>com.admin.servlet.addFlightServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>updateFlightServlet</servlet-name>
+        <servlet-class>com.admin.servlet.updateFlightServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>orderSearchServlet</servlet-name>
+        <servlet-class>com.admin.servlet.orderSearchServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>orderRemoveServlet</servlet-name>
+        <servlet-class>com.admin.servlet.orderRemoveServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>userSearchServlet</servlet-name>
+        <servlet-class>com.admin.servlet.userSearchServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>adminSearchServlet</servlet-name>
+        <servlet-class>com.admin.servlet.adminSearchServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>adminRemoveServlet</servlet-name>
+        <servlet-class>com.admin.servlet.adminRemoveServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>adminAddServlet</servlet-name>
+        <servlet-class>com.admin.servlet.adminAddServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>updateAdminServlet</servlet-name>
+        <servlet-class>com.admin.servlet.updateAdminServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>mainServlet</servlet-name>
+        <servlet-class>com.admin.servlet.mainServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>indexServlet</servlet-name>
+        <servlet-class>com.user.servlet.indexServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>indexLoginServlet</servlet-name>
+        <servlet-class>com.user.servlet.indexLoginServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>indexRegisterServlet</servlet-name>
+        <servlet-class>com.user.servlet.indexRegisterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>indexLogoutServlet</servlet-name>
+        <servlet-class>com.user.servlet.indexLogoutServlet</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>indexOrderServlet</servlet-name>
+        <servlet-class>com.user.servlet.indexOrderServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>indexOrderSearchServlet</servlet-name>
+        <servlet-class>com.user.servlet.indexOrderSearchServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>indexOrderDeleteServlet</servlet-name>
+        <servlet-class>com.user.servlet.indexOrderDeleteServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>indexAddPersonServlet</servlet-name>
+        <servlet-class>com.user.servlet.indexAddPersonServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>indexUpdatePersonServlet</servlet-name>
+        <servlet-class>com.user.servlet.indexUpdatePersonServlet</servlet-class>
+    </servlet>
+
+
+
+
+
+    <servlet-mapping>
+        <servlet-name>indexUpdatePersonServlet</servlet-name>
+        <url-pattern>/default/indexUpdatePersonServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>indexAddPersonServlet</servlet-name>
+        <url-pattern>/default/indexAddPersonServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>indexOrderDeleteServlet</servlet-name>
+        <url-pattern>/default/indexOrderDeleteServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>indexOrderSearchServlet</servlet-name>
+        <url-pattern>/default/indexOrderSearchServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>indexOrderServlet</servlet-name>
+        <url-pattern>/default/indexOrderServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>indexLogoutServlet</servlet-name>
+        <url-pattern>/indexLogoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>indexRegisterServlet</servlet-name>
+        <url-pattern>/indexRegisterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>indexLoginServlet</servlet-name>
+        <url-pattern>/indexLoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>indexServlet</servlet-name>
+        <url-pattern>/indexServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>mainServlet</servlet-name>
+        <url-pattern>/admin/mainServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>updateAdminServlet</servlet-name>
+        <url-pattern>/admin/updateAdminServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>adminSearchServlet</servlet-name>
+        <url-pattern>/admin/adminSearchServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>adminAddServlet</servlet-name>
+        <url-pattern>/admin/adminAddServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>adminRemoveServlet</servlet-name>
+        <url-pattern>/admin/adminRemoveServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>userSearchServlet</servlet-name>
+        <url-pattern>/admin/userSearchServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>orderRemoveServlet</servlet-name>
+        <url-pattern>/admin/orderRemoveServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>orderSearchServlet</servlet-name>
+        <url-pattern>/admin/orderSearchServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>updateFlightServlet</servlet-name>
+        <url-pattern>/admin/updateFlightServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addFlightServlet</servlet-name>
+        <url-pattern>/admin/addFlightServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>flightRemoveServlet</servlet-name>
+        <url-pattern>/admin/flightRemoveServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>flightSearchServlet</servlet-name>
+        <url-pattern>/admin/flightSearchServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>logoutServlet</servlet-name>
+        <url-pattern>/admin/logoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/admin/loginServlet</url-pattern>
+    </servlet-mapping>
+
+</web-app>
