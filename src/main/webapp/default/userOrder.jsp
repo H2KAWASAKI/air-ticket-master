@@ -27,7 +27,7 @@
     }
     else {
         username=user.getUsername();
-        url="default/userInformation.jsp";
+        url="userInformation.jsp";
     }
 %>
 <html lang="zh-CN">
